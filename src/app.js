@@ -30,6 +30,11 @@ const store = new Vuex.Store({
             state.list = state.list.filter((itm,ind)=>ind!==index)
         }
     },
+    actions: {
+      addList (context,item) {
+          context.commit('addList',item)
+      }
+    },
     getters: {
         list: state => state.list,
     }

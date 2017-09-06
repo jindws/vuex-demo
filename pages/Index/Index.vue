@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import {mapGetters, mapMutations} from 'vuex'
+import {mapGetters, mapMutations,mapActions} from 'vuex'
 export default {
   data(){
     return {
@@ -19,8 +19,11 @@ export default {
   },
   methods: {
       ...mapMutations([
-          'addList',
+          // 'addList',
           'removeList'
+      ]),
+      ...mapActions([
+        'addList'
       ]),
       join(){
           if(this.message){
